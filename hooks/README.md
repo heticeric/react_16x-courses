@@ -343,8 +343,12 @@ export default () =>
 }
 ```
 
+## Custom hooks
+**TODO**
+
 ## Hook hook hook
 
 - [Brightleaf React Hooks](https://brightleaf.dev/hooks/)
 - [Awesome React Hooks Resources](https://github.com/rehooks/awesome-react-hooks)
 - [Collection of React Hooks](https://nikgraf.github.io/react-hooks/)
+- [react-fetching-library](https://github.com/marcin-piela/react-fetching-library)
