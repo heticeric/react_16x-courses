@@ -4,7 +4,7 @@
 Les `props` servent à faire passer des données dans la hiérarchie des composants.
 Toutefois, lorsque la profondeur de cette dernière est importante, cela oblige chaque composant à littéralement transférer les valeurs, jusqu'à plusieurs niveaux. Cette méthodologie bien que fonctionnelle provoque assez vite du code verbeux.
 
-L'API `Context` quant à elle permet de faire passer des valeurs, quelque soit l'imbrication des composants. En effet, deux éléments rentrent en jeu dans cette communication à travers les niveaux : 
+L'API `Context` quant à elle permet de faire passer des valeurs, quelque soit la hiérarchie d'imbrication des composants. En effet, deux éléments rentrent en jeu dans cette communication à travers les niveaux : 
 - un `Provider`
 - un `Consumer` 
 
