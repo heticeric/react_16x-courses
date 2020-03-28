@@ -98,9 +98,6 @@ La tentation est forte de vouloir remplacer le framework [Redux](https://redux.j
 ### Multi contexts to the rescue
 [Motif de conception pour de larges applications scalables](context/context_wise.md)
 
-### Bonnes pratiques
-[Best practices](context/best_practices.md)
-
 ## Observable RxJS
 ### Observable
 
