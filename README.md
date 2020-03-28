@@ -210,6 +210,10 @@ La tentation est forte de vouloir remplacer le framework [Redux](https://redux.j
 - https://frontarm.com/james-k-nelson/when-context-replaces-redux/
 - https://frontarm.com/james-k-nelson/react-context-performance/
 - https://leewarrick.com/blog/the-problem-with-context/
+
+### Multi contexts to the rescue
+
+#### Références
 - https://kentcdodds.com/blog/how-to-use-react-context-effectively
 
 ## Observable RxJS
