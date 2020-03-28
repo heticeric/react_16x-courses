@@ -46,119 +46,16 @@ La technique utilisée se nomme [mémoïsation](hooks/memoization.md). Elle cons
 - https://medium.com/@WebReflection/demystifying-hooks-f55ad885609f
 
 ## Optimisations 
-
-### De l'importance de l'emplacement d'un états applicatif
-Ken C. Dodds suggère de laisser les états applicatifs aussi peoches que possible du composant qui les utilisent. [Il nomme cette méthodologie `co-location`](https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster).
-
-> Exemple sans colocation 
-
-```js
-function sleep(time) {
-  const done = Date.now() + time
-  while (done > Date.now()) {
-    // sleep...
-  }
-}
-
-// imagine that this slow component is actually slow because it's rendering a
-// lot of data (for example).
-function SlowComponent({time, onChange}) {
-  sleep(time)
-  return (
-    <div>
-      Wow, that was{' '}
-      <input
-        value={time}
-        type="number"
-        onChange={e => onChange(Number(e.target.value))}
-      />
-      ms slow
-    </div>
-  )
-}
-
-function DogName({time, dog, onChange}) {
-  return (
-    <div>
-      <label htmlFor="dog">Dog Name</label>
-      <br />
-      <input id="dog" value={dog} onChange={e => onChange(e.target.value)} />
-      <p>{dog ? `${dog}'s favorite number is ${time}.` : 'enter a dog name'}</p>
-    </div>
-  )
-}
-
-function App() {
-  // this is "global state"
-  const [dog, setDog] = React.useState('')
-  const [time, setTime] = React.useState(200)
-  return (
-    <div>
-      <DogName time={time} dog={dog} onChange={setDog} />
-      <SlowComponent time={time} onChange={setTime} />
-    </div>
-  )
-}
-```
-
-> Le même exemple avec colocation des états
-
-```js
-function sleep(time) {
-  const done = Date.now() + time
-  while (done > Date.now()) {
-    // sleep...
-  }
-}
-
-// imagine that this slow component is actually slow because it's rendering a
-// lot of data (for example).
-function SlowComponent({time, onChange}) {
-  sleep(time)
-  return (
-    <div>
-      Wow, that was{' '}
-      <input
-        value={time}
-        type="number"
-        onChange={e => onChange(Number(e.target.value))}
-      />
-      ms slow
-    </div>
-  )
-}
-
-function DogName({time}) {
-  const [dog, setDog] = React.useState('') // <--- colocated state
-  return (
-    <div>
-      <label htmlFor="dog">Dog Name</label>
-      <br />
-      <input id="dog" value={dog} onChange={e => setDog(e.target.value)} />
-      <p>{dog ? `${dog}'s favorite number is ${time}.` : 'enter a dog name'}</p>
-    </div>
-  )
-}
-
-function App() {
-  // this is "global state"
-  const [time, setTime] = React.useState(200)
-  return (
-    <div>
-      <DogName time={time} />
-      <SlowComponent time={time} onChange={setTime} />
-    </div>
-  )
-}
-```
-
-Vous comprenez à quel point il est crucial de savoir définir la définition de vos états.
-C'est d'autant plus vrai lorsque sont utilisés des frameworks tels que `Redux`, qui tendent à **définir tous les états d'une application dans un store global**.
-
-![Decision tree on state defintion](media/where-to-put-state.png)
-
+### Inventaire des méthodes de gestion des états
 #### Références
+- https://www.robinwieruch.de/react-state
 
+### Colocation des états
+Ken C. Dodds suggère de laisser les états applicatifs aussi proches que possible du composant qui les utilisent.
+[Il nomme cette méthodologie *co-location*](optim/README.md)
+
+### Autres méthodes 
+#### Références
 - https://www.toptal.com/react/optimizing-react-performance
 - https://medium.com/better-programming/performance-optimization-with-react-hooks-and-memo-e3186f7ff9ab
 - https://dev.to/oahehc/few-tips-to-optimizing-performance-of-react-project-5h25
@@ -194,27 +91,15 @@ export default () =>
 }
 ```
 
-
-### Inventaire des méthodes de gestion des états
-
-#### Références
-- https://kentcdodds.com/blog/application-state-management-with-react
-- https://www.robinwieruch.de/react-state
-
-
 ### Question performances
 La tentation est forte de vouloir remplacer le framework [Redux](https://redux.js.org/) par un `Context` global, faisant œuvre de *store*.
 [Quid des contraintes et performances ?](context/performances.md)
 
-#### Références
-- https://frontarm.com/james-k-nelson/when-context-replaces-redux/
-- https://frontarm.com/james-k-nelson/react-context-performance/
-- https://leewarrick.com/blog/the-problem-with-context/
-
 ### Multi contexts to the rescue
+[Motif de conception pour de larges applications scalables](context/context_wise.md)
 
-#### Références
-- https://kentcdodds.com/blog/how-to-use-react-context-effectively
+### Bonnes pratiques
+[Best practices](context/best_practices.md)
 
 ## Observable RxJS
 ### Observable

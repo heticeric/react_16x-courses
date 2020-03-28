@@ -153,6 +153,7 @@ Dans l'exemple précédent, si nous clliquons sur le bouton *Increment*, seule l
 
 
 ### Dans quels cas utiliser ces hooks ?
+**Le conseil est d'éviter l'usage de fonctionnalités, tant que des problèmes de performances ne surgissent pas.**
 
 #### Références
 - https://kentcdodds.com/blog/usememo-and-usecallback
