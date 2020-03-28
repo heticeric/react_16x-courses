@@ -63,6 +63,8 @@ observable.subscribe
 );
 ```
 
+## Auto disposable
+
 **Attention**, l'`Observable` **se clotûre automatiquement dès que toutes ses valeurs sont émises**.
 
 ```js
@@ -77,6 +79,39 @@ a$.pipe(
     next( v ){ console.log( `A ${v}` ) }
     ,complete(){ console.log( `I'm done !` ); }
   }
+);
+```
+
+## Annuler une souscription
+Au moment de l'abonnement à un stream, nous pouvons récupérer une référence pour stopper la souscription.
+
+> unsubcribe() handler
+
+```js
+const observable = new Observable
+(
+ subscriber =>
+ {
+ 	const intervalId 
+ 		= setInterval
+ 		(
+ 			() => subscriber.next("hi");
+  			, 1000
+  		);
+  	
+  	// Here we delare a function reference to unsubscribe to the current stream
+  	return function unsubscribe()
+  	{
+  		clearInterval(intervalId);
+ 	};
+});
+
+const subscription = observable.subscribe( x => console.log(x) );
+
+setTimeout
+(
+	() => subscription.unsubscribe();//<--- here
+	, 3000
 );
 ```
 
