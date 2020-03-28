@@ -98,16 +98,10 @@ La tentation est forte de vouloir remplacer le framework [Redux](https://redux.j
 ### Multi contexts to the rescue
 [Motif de conception pour de larges applications scalables](context/context_wise.md)
 
-## Observable RxJS
+## Reactive state with RxJS
 ### Observable
-
-#### Références
-- https://levelup.gitconnected.com/introduction-to-reactive-programming-with-rxjs-114fa5e57eb1
-
-### Tips & tricks
-
-#### Références
-- http://slides.com/michalzalecki/reactive-javascript
+La réactivité des `Observable` peut également nous intéresser dans la gestion des états applicatif.
+[Petite révision sur l'Observable RxJS](reactive/README.md)
 
 ### Subject
 
