@@ -106,12 +106,8 @@ La réactivité des `Observable` peut également nous intéresser dans la gestio
 ### Subject
 [La classe `Subject` étend `Observable`](reactive/subject.md).
 
-### Gestion optimisée des états applicatifs
-#### Références
-- https://blog.logrocket.com/rxjs-with-react-hooks-for-state-management/ 
-- https://hackernoon.com/diy-redux-with-rxjs-rxdx-23163a87ade1
-- https://blog.betomorrow.com/replacing-redux-with-observables-and-react-hooks-acdbbaf5ba80
+### Tips & tricks
+[Quelques exemples intéressant d'usage des streams reactifs](reactive/tips.md).
 
-#### Libraries
-- https://github.com/DanWahlin/Observable-Store
-- https://meiosis.js.org/
+### Gestion optimisée des états applicatifs
+[Est-il possible de s'approprier des streams RxJS pour gérer les `state` d'une application *react* ?](reactive/store.md)
