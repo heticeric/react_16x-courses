@@ -104,10 +104,7 @@ La réactivité des `Observable` peut également nous intéresser dans la gestio
 [Petite révision sur l'Observable RxJS](reactive/README.md)
 
 ### Subject
-
-#### Références
-- https://medium.com/@luukgruijs/understanding-rxjs-subjects-339428a1815b
-- https://www.akveo.com/blog/understanding-observables-and-subjects-in-rxjs-multicasting-values
+[La classe `Subject` étend `Observable`](reactive/subject.md).
 
 ### Gestion optimisée des états applicatifs
 #### Références

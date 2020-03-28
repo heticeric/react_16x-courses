@@ -20,7 +20,7 @@ Contrairement aux appels de fonctions traditionnels, qui sont issus par **PULL**
 > Mixer des valeurs synchrones et asynchrones 
 
 ```js
-const observable = new Rx.Observable
+const observable$ = new Rx.Observable
 (
 	subscriber =>
 	{
@@ -41,19 +41,19 @@ const observable = new Rx.Observable
 > Pour recevoir le flux de valeurs
  
 ```js
-observable.subscribe( val => console.log( val ) );
+observable$.subscribe( val => console.log( val ) );
 ```
 
 ou plus simple
 
 ```js
-observable.subscribe( console.log );
+observable$.subscribe( console.log );
 ```
 
 > Il est également possible de suivre les erreurs du flux de l'`Observable`
 
 ```js
-observable.subscribe
+observable$.subscribe
 (
 	{
 	  next(x) { console.log(x); /* New value emitted */ }
@@ -88,7 +88,7 @@ Au moment de l'abonnement à un stream, nous pouvons récupérer une référence
 > unsubcribe() handler
 
 ```js
-const observable = new Observable
+const observable$ = new Observable
 (
  subscriber =>
  {
@@ -106,7 +106,7 @@ const observable = new Observable
  	};
 });
 
-const subscription = observable.subscribe( x => console.log(x) );
+const subscription = observable$.subscribe( x => console.log(x) );
 
 setTimeout
 (
