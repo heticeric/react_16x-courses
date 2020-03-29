@@ -55,5 +55,9 @@ click$
 ```
 [@see it live](https://codepen.io/heticschool/pen/eYNbxVr)
 
+## requêtes HTTP et reac condition
+- [@see AJAX call from cleck event](https://codepen.io/heticschool/pen/mdJavGe)
+- [@see AJAX with race condition !](https://codepen.io/heticschool/pen/gOpqazG)
+
 ### Références
 - https://x-team.com/blog/rxjs-observables/
