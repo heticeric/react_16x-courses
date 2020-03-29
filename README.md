@@ -43,6 +43,7 @@ La technique utilisée se nomme [mémoïsation](hooks/memoization.md). Elle cons
 ### In-depth
 
 #### Références
+- https://www.netlify.com/blog/2019/03/11/deep-dive-how-do-react-hooks-really-work/
 - https://medium.com/@WebReflection/demystifying-hooks-f55ad885609f
 
 ## Optimisations 
@@ -99,6 +100,9 @@ La tentation est forte de vouloir remplacer le framework [Redux](https://redux.j
 [Motif de conception pour de larges applications scalables](context/context_wise.md)
 
 ## Reactive state with RxJS
+### Avantages de la programmation reactive
+[Pourquoi devrions nous tous utiliser la programmation réactive ?](reactive/why.md)
+
 ### Observable
 La réactivité des `Observable` peut également nous intéresser dans la gestion des états applicatif.
 [Petite révision sur l'Observable RxJS](reactive/README.md)
