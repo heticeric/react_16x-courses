@@ -146,6 +146,8 @@ const UserSettings = () =>
 }
 ```
 
+[Exemple d'implémentation](https://github.com/ninolam/context-api-exercice)
+
 #### Références
 - https://kentcdodds.com/blog/application-state-management-with-react
 
