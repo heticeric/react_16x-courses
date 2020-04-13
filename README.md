@@ -107,6 +107,9 @@ La tentation est forte de vouloir remplacer le framework [Redux](https://redux.j
 La réactivité des `Observable` peut également nous intéresser dans la gestion des états applicatif.
 [Petite révision sur l'Observable RxJS](reactive/README.md)
 
+### Observable in depth
+[Plongée dans le code des `Observable`](reactive/indepth.md).
+
 ### Subject
 [La classe `Subject` étend `Observable`](reactive/subject.md).
 

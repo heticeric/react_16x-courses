@@ -117,6 +117,7 @@ setTimeout
 
 #### Références
 - https://levelup.gitconnected.com/introduction-to-reactive-programming-with-rxjs-114fa5e57eb1
+- https://dev.to/creeland/intro-to-rxjs-concepts-with-vanilla-javascript-4aji
 
 ### Tips & tricks
 
