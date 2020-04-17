@@ -56,3 +56,5 @@ export default () => (
     </ul>
 );
 ```
+
+[Exemple d'implémentation](https://github.com/heticeric/react_context-demo)
