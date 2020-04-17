@@ -146,7 +146,7 @@ const UserSettings = () =>
 }
 ```
 
-[Exemple d'implémentation](https://github.com/heticeric/react_mutlticontexts-demo)
+[Exemple d'implémentation](https://github.com/heticeric/react_multicontexts-demo)
 
 #### Références
 - https://kentcdodds.com/blog/application-state-management-with-react
