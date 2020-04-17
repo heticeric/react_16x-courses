@@ -27,7 +27,7 @@ Voilà une bonne occasion d'utiliser une version *mémoïsée* de sa valeur.
 > Exemple avec mémoïsation
 
 ```js
-import React, { useState} from "react";
+import React, { useState, useMemo } from "react";
 
 export default() =>
 {
